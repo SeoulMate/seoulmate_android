@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+
+    <string name="app_name">سيول مايت</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="board">الصفحة الرئيسية</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="q_a">أسئلة وأجوبة</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="signup">تسجيل</string>
+    <string name="no_board_post">لا يوجد مقالة</string>
+    <string name="no_feed_post">لا يوجد مقالة بعد</string>
+
+    <!-- Error Messages -->
+    <string name="something_went_wrong">حدث خطأ ما</string>
+    <string name="answer_popup_title">مشاركة هذا الرد أو القبول به كصحيح</string>
+    <string name="share">شارك</string>
+    <string name="accept_answer">هذه الإجابة على النحو الصحيح</string>
+    <string name="not_allowed_to_accept_answer">يسمح للكاتب فقط بقبول الاجابة</string>
+    <string name="no_comments_posted">ليس هناك تعليق</string>
+    <string name="title_share">شارك مع اصدقائك</string>
+    <string name="comment_submitted">تم تسجيل التعليق</string>
+    <string name="ok">تم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="action_delete">حذف السؤال</string>
+    <string name="delete_confirm_title">@string/action_delete</string>
+    <string name="delete_confirm_message">هل أنت متأكد أنك تريد إزالة هذا السؤال من سيول مايت بشكل دائم</string>
+    <string name="answer_hint">كتابة إجابتك هنا</string>
+    <string name="posted_by">مشاركة %s</string>
+    <string name="submit">عرض</string>
+    <string name="enter_some_text">أدخل النص هنا</string>
+    <string name="action_logout">خروج</string>
+    <string name="refresh">اعادة تنشيط</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="ask_question">اسأل سؤالا</string>
+    <string name="write_board_post">كتابة مقالة</string>
+    <string name="next">التالى</string>
+    <string name="choose_category">اختيار الفئة</string>
+    <string name="choose_category_selected">اختيار الفئة: %s</string>
+    <string name="add_board_title">كتابة عنوان</string>
+    <string name="add_board_content">اكتب المحتوى</string>
+    <string name="question_board_posted_toast">شارك بنجاح</string>
+    <string name="select_picture">اختر الصورة</string>
+    <string name="insert_link_message">مثلا http://seoul.go.kr</string>
+    <string name="insert_link_title">إدخال URL صالح</string>
+    <string name="network_not_available">الشبكة غير متاحة</string>
+    <string name="enter_valid_url">يرجى إدخال عنوان / رابط صحيح</string>
+    <string name="additional_info">معلومات اضافية</string>
+    <string name="posted_by_with_time">نشر في
+ %1$s - %2$s</string>
+    <string name="voting_down">لقد قمت بالتصويت لأسفل على هذا المقال!</string>
+    <string name="write_question_in_detail">أكتب السؤال بالتفصيل</string>
+    <string name="optional_university">اختياري: اضافة اسم الجامعة</string>
+    <string name="write_question_detail">كتابة التفاصيل</string>
+
+
+</resources>

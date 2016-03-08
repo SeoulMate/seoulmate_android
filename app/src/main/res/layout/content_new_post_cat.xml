@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:showIn="@layout/activity_new_post_cat">
+
+    <TextView
+        android:id="@+id/toolbar_choose_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="@string/choose_category" />
+
+    <GridView
+        android:id="@+id/tags"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:cropToPadding="true"
+        android:numColumns="auto_fit"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@android:color/transparent"
+        android:verticalSpacing="@dimen/spacing_double" />
+</LinearLayout>

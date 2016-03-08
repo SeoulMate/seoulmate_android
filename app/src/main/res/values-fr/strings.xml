@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+
+    <string name="app_name">Seoul Mate</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="board">Accueil</string>
+    <string name="leaderboard">Accueil Principale</string>
+    <string name="q_a">FAQ(Foire aux questions)</string>
+    <string name="login">Se Connecter </string>
+    <string name="signup">Inscription</string>
+    <string name="no_board_post">Pas encore de post</string>
+    <string name="no_feed_post">Pas encore de FAQ </string>
+    <string name="share">Share</string>
+
+    <!-- Error Messages -->
+    <string name="something_went_wrong">une erreur à servunue</string>
+    <string name="answer_popup_title">Partager cette réponse ou l\'accepter si c\'est correcte </string>
+    <string name="accept_answer">Marquer comme correcte </string>
+    <string name="not_allowed_to_accept_answer">Seulement les écriteurs de post a le droit d\'accepter la réponse</string>
+    <string name="no_comments_posted">Pas de commentaires </string>
+    <string name="title_share">PArtager avec les amis </string>
+    <string name="comment_submitted">commentaire posté avec succés </string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="delete_confirm_title">@string/action_delete</string>
+    <string name="delete_confirm_message">êtes-vous sûre vous voulez suppimer cette question ?</string>
+    <string name="answer_hint">écrivez votre réponse ici </string>
+    <string name="posted_by">Posté par %s</string>
+    <string name="submit">Poster</string>
+    <string name="enter_some_text">Saisir le texte ici</string>
+    <string name="action_logout">Déconnection</string>
+    <string name="refresh">rafraîchir</string>
+    <string name="notifications">Notifications</string>
+    <string name="ask_question">Poser des questions</string>
+    <string name="write_board_post">Partager sur le mur</string>
+    <string name="next">suivant</string>
+    <string name="choose_category">choix de catégorie </string>
+    <string name="choose_category_selected">choix de catégorie : %s</string>
+    <string name="add_board_title">écrivez le titre</string>
+    <string name="add_board_content">écrivez le contenu</string>
+    <string name="question_board_posted_toast">Partager avec succés</string>
+    <string name="select_picture">sélectionner une photo</string>
+    <string name="insert_link_message">Par exemple http://seoul.go.kr</string>
+    <string name="insert_link_title">Saisir une URL valide </string>
+    <string name="network_not_available">réseau indisponible </string>
+    <string name="enter_valid_url">Saisir une URL valide</string>
+    <string name="additional_info">informations supplémentaire</string>
+    <string name="posted_by_with_time">Partager par %1$s - %2$s</string>
+    <string name="voting_down">vous avez voter mal pour ce post </string>
+    <string name="write_question_in_detail">saisir une question detaillé</string>
+    <string name="optional_university">Optionel: saisir le nom de votre univesité </string>
+    <string name="write_question_detail">saisir les détails </string>
+
+
+</resources>

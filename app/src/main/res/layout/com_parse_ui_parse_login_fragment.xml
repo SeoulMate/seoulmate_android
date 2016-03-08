@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingRight="@dimen/com_parse_ui_horizontal_margin"
+    android:layout_gravity="center"
+    android:background="@drawable/university_homec"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SeoulMate.List.LandingTitle"
+        android:layout_marginTop="110dp"
+        android:gravity="center_horizontal"
+        android:text="@string/message_1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/message_2"
+        style="@style/SeoulMate.List.LandingSubTitle"
+        android:layout_height="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_marginTop="-56dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/com_parse_ui_parse_login_form" />
+
+        <include layout="@layout/com_parse_ui_parse_login_third_party_section" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/seoulmatelogo"
+        android:contentDescription="@string/com_parse_ui_logo_content_description" />
+
+</LinearLayout>

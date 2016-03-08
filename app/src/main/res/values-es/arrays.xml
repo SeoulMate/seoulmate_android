@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat_array">
+
+        <item>Korean Language</item>
+        <item>News</item>
+        <item>Media &amp; Entertainment</item>
+        <item>Jobs &amp; Internships</item>
+        <item>Scholarships</item>
+        <item>Tourism</item>
+        <item>History &amp; Culture</item>
+        <item>Social Media</item>
+
+    </string-array>
+
+</resources>

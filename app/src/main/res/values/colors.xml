@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF5252</color>
+
+    <color name="category_title">#7649ad</color>
+    <color name="question_list_title">#2c2c2c</color>
+    <color name="question_list_timeview">#979797</color>
+    <color name="white">#ffffff</color>
+    <color name="profile_name">#49484b</color>
+    <color name="profile_followers_number">#5d5d5d</color>
+    <color name="tag_backgroud_color">#dddddd</color>
+    <color name="theme_green_primary">#1de9b6</color>
+    <color name="theme_red_primary">#ff5252</color>
+
+    <color name="light_grey">#f5f5f5</color>
+
+
+
+</resources>

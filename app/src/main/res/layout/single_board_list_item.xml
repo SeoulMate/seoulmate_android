@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/board_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:elevation="4dp"
+    android:layout_margin="4dp"
+    android:background="@android:color/white"
+    android:paddingLeft="0dp" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBoardLayout"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:layout_height="0dp"
+                android:layout_weight="0.5">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="12dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/voteUpLayout"
+                android:paddingRight="4dp"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionVoteIcon"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/vote_icon">
+                    </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionVotes"
+                    android:layout_marginTop="4dp"
+                    android:text="4"
+                    style="@style/SeoulMate.List.Vote"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/qtitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:gravity="top|left"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:maxLines="2"
+                android:lines="2"
+                style="@style/SeoulMate.List.Title"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginTop="-56dp"
+                android:paddingBottom="2dp"
+                android:text="@string/large_text" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tag_of_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:textSize="12sp"
+                android:text="#transport"
+                android:textColor="@color/question_list_timeview"
+                android:layout_marginLeft="38dp"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/bottomBoardLayout"
+        android:layout_below="@id/topBoardLayout">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/avatar_size_q_list"
+            android:layout_height="@dimen/avatar_size_q_list"
+            android:scaleType="fitCenter"
+            android:id="@+id/profilePicList"
+            android:padding="2dp"
+            android:src="@drawable/avatar_6_raster"
+            android:layout_gravity="center"
+            app:riv_corner_radius="60dip"
+            app:riv_border_width="1dip"
+            app:riv_border_color="#FFFFFF"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="clamp"
+            app:riv_oval="true"
+            />
+        <TextView
+            android:id="@+id/writer_name"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="6dp"
+            android:gravity="left"
+            style="@style/SeoulMate.List.WriterName"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:paddingRight="4dp"
+            android:src="@drawable/time"/>
+        <TextView
+            android:id="@+id/time_view"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right|center_vertical"
+            style="@style/SeoulMate.List.TimeView"
+            android:layout_height="wrap_content"
+            android:text="1 month ago"
+            android:paddingRight="3dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

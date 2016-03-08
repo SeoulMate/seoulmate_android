@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:src="@drawable/seoulmatelogo"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:contentDescription="@string/app_name" />
+    <EditText
+        android:id="@+id/answer_edit_text"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:maxLines="4"
+        android:gravity="top"
+        android:layout_gravity="top"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/answer_hint" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat_array">
+
+        <item>اللغة الكورية</item>
+        <item>الأخبار</item>
+        <item>الإعلام والترفيه</item>
+        <item>العمل والتدريب</item>
+        <item>منح دراسية</item>
+        <item>سياحة</item>
+        <item>التاريخ والثقافة</item>
+        <item>وسائل التواصل الاجتماعي</item>
+
+    </string-array>
+
+
+</resources>

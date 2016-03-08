@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="top"
+        android:paddingTop="6dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/write_question_in_detail"
+        android:id="@+id/questionTitle"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressQuesion"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="top"
+        android:paddingTop="4dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:hint="@string/optional_university"
+        android:id="@+id/questionContent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayoutBoard">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/ic_add_a_photo_black_24dp"
+            android:id="@+id/insertPhoto"/>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:background="@drawable/ic_insert_link_black_36dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/colorAccent"
+            android:id="@+id/insertLink"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

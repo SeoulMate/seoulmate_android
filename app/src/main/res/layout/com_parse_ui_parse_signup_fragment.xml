@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/com_parse_ui_vertical_margin"
+    android:paddingLeft="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingRight="@dimen/com_parse_ui_horizontal_margin"
+    android:layout_marginTop="16dp"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/com_parse_ui_parse_signup_form"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-60dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/seoulmatelogo"
+        android:contentDescription="@string/com_parse_ui_logo_content_description" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cat_array">
+
+        <item>Langue Coréen</item>
+        <item>Actualités</item>
+        <item>Media et Entertainment</item>
+        <item>Travail et stages </item>
+        <item>Bouses d\'études</item>
+        <item>Tourisme</item>
+        <item>Histoire et culture</item>
+        <item>média social</item>
+
+    </string-array>
+
+
+</resources>

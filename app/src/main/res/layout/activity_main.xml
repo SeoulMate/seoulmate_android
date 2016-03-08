@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="co.seoulmate.android.app.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/SeoulMate.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/SeoulMate.PopupOverlay">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/avatar_size_q_list"
+                android:layout_height="@dimen/avatar_size_q_list"
+                android:scaleType="fitCenter"
+                android:id="@+id/profilePicMain"
+                android:padding="2dp"
+                android:src="@drawable/avatar_6_raster"
+                android:layout_gravity="left"
+                app:riv_corner_radius="60dip"
+                app:riv_border_width="1dip"
+                app:riv_border_color="#FFFFFF"
+                app:riv_mutate_background="true"
+                app:riv_tile_mode="clamp"
+                app:riv_oval="true"
+                />
+
+            <TextView android:id="@+id/userNameMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="PrivateResource"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                style="@style/MAIN.NAME"
+                android:text="Name"
+                android:paddingStart="@dimen/spacing_micro"
+                android:paddingLeft="@dimen/spacing_micro"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical|start">
+
+            </TextView>
+            <TextView android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:paddingEnd="@dimen/spacing_micro"
+                style="@style/MAIN.NAME"
+                android:paddingStart="@dimen/spacing_micro" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ProgressBar
+        android:id="@+id/progressBoard"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+<!--    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:src="@android:drawable/ic_input_add" />-->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="10dp"
+        fab:menu_icon="@drawable/ic_add_white_24dp"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccent"
+        fab:menu_colorRipple="@color/colorAccent"
+        fab:menu_labels_maxLines="2"
+        fab:menu_labels_ellipsize="end">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addBoardPost"
+            android:src="@drawable/ic_event_note_white_24dp"
+            fab:fab_label="@string/write_board_post"
+            style="@style/MenuButtonsSmall.Green" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/newQuestion"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_question_answer_white_24dp"
+            fab:fab_label="@string/ask_question"
+            style="@style/MenuButtonsSmall.Green" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
