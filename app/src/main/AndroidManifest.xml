@@ -81,7 +81,7 @@
             android:name=".activities.FeedDetailActivity"
             android:label="@string/answers_to_question"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -90,7 +90,7 @@
             android:name=".activities.BoardDetailActivity"
             android:label="@string/title_activity_board_detail"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.seoulmate.android.app.MainActivity" />
@@ -99,7 +99,7 @@
             android:name=".activities.NewPostCatActivity"
             android:label="@string/ask_question"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.seoulmate.android.app.MainActivity" />
@@ -108,7 +108,7 @@
             android:name=".activities.NewBoardPostActivity"
             android:label="@string/write_board_post"
             android:parentActivityName=".activities.NewPostCatActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.seoulmate.android.app.activities.NewPostCatActivity" />
@@ -117,7 +117,7 @@
             android:name=".activities.NewQuestionActivity"
             android:label="@string/write_question_detail"
             android:parentActivityName=".activities.NewPostCatActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.seoulmate.android.app.activities.NewPostCatActivity" />
@@ -126,7 +126,7 @@
             android:name=".activities.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/SeoulMate.Base.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.seoulmate.android.app.MainActivity" />

@@ -28,10 +28,9 @@
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="4dp"
-                android:paddingLeft="12dp"
                 android:paddingBottom="2dp"
+                android:layout_marginLeft="4dp"
                 android:id="@+id/voteUpLayout"
-                android:paddingRight="4dp"
                 android:layout_height="wrap_content">
 
                 <ImageButton
@@ -47,16 +46,15 @@
                     android:id="@+id/questionVotes"
                     android:layout_marginTop="4dp"
                     android:text="4"
-                    android:paddingRight="4dp"
                     style="@style/SeoulMate.List.Vote"
                     android:layout_gravity="center"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
                     android:id="@+id/questionStatus"
                     android:layout_marginTop="10dp"
-                    android:visibility="invisible"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal|bottom"
                     android:src="@drawable/check_pressed"/>
             </LinearLayout>
 
@@ -71,7 +69,8 @@
                 style="@style/SeoulMate.List.FeedTitle"
                 android:paddingRight="10dp"
                 android:paddingEnd="10dp"
-                android:layout_marginTop="-78dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="-82dp"
                 android:paddingBottom="8dp"
                 android:text="@string/large_text" />
             </LinearLayout>
@@ -83,7 +82,7 @@
                 android:textSize="12sp"
                 android:text="#transport"
                 android:textColor="@color/question_list_timeview"
-                android:layout_marginLeft="38dp"/>
+                android:layout_marginLeft="50dp"/>
         </LinearLayout>
 
 

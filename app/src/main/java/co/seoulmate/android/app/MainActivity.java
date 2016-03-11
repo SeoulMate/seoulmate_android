@@ -39,6 +39,7 @@ import com.facebook.GraphResponse;
 import com.facebook.LoggingBehavior;
 import com.facebook.appevents.AppEventsLogger;
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.android.gms.analytics.HitBuilders;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.parse.LogOutCallback;
 import com.parse.ParseException;
@@ -65,6 +66,7 @@ import co.seoulmate.android.app.activities.ProfileActivity;
 import co.seoulmate.android.app.fragments.BoardFragment;
 import co.seoulmate.android.app.fragments.FeedFragment;
 import co.seoulmate.android.app.fragments.LeadershipFragment;
+import co.seoulmate.android.app.helpers.AConstants;
 import co.seoulmate.android.app.helpers.PreferencesHelper;
 import co.seoulmate.android.app.utils.ModelUtils;
 import co.seoulmate.android.app.utils.UserUtils;
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private Toolbar toolbar;
     private FloatingActionMenu postMenu;
+    private AnalyticsTrackers mTracker;
     /**
      * The {@link ViewPager} that will host the section contents.
      */
@@ -114,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
         newBoardFab.setOnClickListener(clickListener);
         newQuestionFab.setOnClickListener(clickListener);
-
+        sendAnalytics();
     }
 
 
@@ -520,7 +523,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Boolean isQuestion = PreferencesHelper.getQuestionNotiStatus(this);
         String questionObjectId = PreferencesHelper.getQuestionId(this);
-        Log.d(LOG,"feed noti : " + isBoard + "|" +questionObjectId);
+        Log.d(LOG, "feed noti : " + isBoard + "|" + questionObjectId);
         if(isQuestion && questionObjectId != "default") {
             PreferencesHelper.writeToPreferenceQuestionNotiStatus(this, false);
             Intent intent = new Intent(MainActivity.this, FeedDetailActivity.class);
@@ -529,5 +532,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+    }
+
+    private void sendAnalytics() {
+
+     /*   try {
+            mTracker = AnalyticsTrackers.getInstance();
+            mTracker.get(AnalyticsTrackers.Target.APP).setScreenName(AConstants.SCREEN_HOME);
+            mTracker.get(AnalyticsTrackers.Target.APP).send(new HitBuilders.ScreenViewBuilder().build());
+        } catch (IllegalStateException e) {
+        }*/
     }
 }

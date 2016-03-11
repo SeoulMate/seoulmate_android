@@ -19,6 +19,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.facebook.AccessToken;
+import com.google.android.gms.analytics.HitBuilders;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -34,7 +36,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
+import co.seoulmate.android.app.AnalyticsTrackers;
 import co.seoulmate.android.app.R;
+import co.seoulmate.android.app.helpers.AConstants;
 import co.seoulmate.android.app.model.Board;
 import co.seoulmate.android.app.utils.ModelUtils;
 import co.seoulmate.android.app.utils.UserUtils;
@@ -116,7 +120,7 @@ public class BoardDetailActivity extends AppCompatActivity {
 
         collapsingToolbarLayout.setTitle(object.getTitle());
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.SeoulMate_CollapsingToolBar_Title);
-
+        sendAnalytic(object.getTitle());
         RoundedImageView profilePic = (RoundedImageView) findViewById(R.id.boardDetailProfilePic);
         FloatingActionButton linkFab = (FloatingActionButton) findViewById(R.id.fab);
         progressBar = (ProgressBar) findViewById(R.id.progressBoardDetail);
@@ -173,6 +177,8 @@ public class BoardDetailActivity extends AppCompatActivity {
 
         if(object.getVoters() != null) {
             voteCount.setText(String.valueOf(object.getVoters().size()));
+        } else {
+            voteCount.setText(String.valueOf(0));
         }
 
 
@@ -274,35 +280,8 @@ public class BoardDetailActivity extends AppCompatActivity {
             });
         } else if (q.getVoters() != null && q.getVoters().contains(cUser)) {
 
-            Snackbar.make(voteTextView, getResources().getString(R.string.voting_down), Snackbar.LENGTH_LONG)
+            Snackbar.make(voteTextView, getResources().getString(R.string.voting_already), Snackbar.LENGTH_LONG)
                     .setAction("OK", null).show();
-
-            int newVoteCount = q.getVoters().size() - 1;
-            voteTextView.setText(String.valueOf(newVoteCount));
-            q.removeVoter(cUser, q);
-            q.pinInBackground(ModelUtils.BOARD_PIN, new SaveCallback() {
-                @Override
-                public void done(ParseException e) {
-                    if (e == null) {
-
-                        q.saveInBackground(new SaveCallback() {
-                            @Override
-                            public void done(ParseException e) {
-                                if (e == null) {
-                                    Log.d(LOG_TAG, "updated vote count and object");
-                                } else {
-                                    Log.d(LOG_TAG, "error occured while updating voters :"
-                                            + e.getMessage());
-                                }
-                            }
-                        });
-                    } else {
-                        Log.d(LOG_TAG, "error occured while updating voters locally :"
-                                + e.getMessage());
-                    }
-                }
-            });
-
 
         }else if (q.getVoters() == null) {
             Log.d(LOG_TAG,"add first voters");
@@ -347,6 +326,21 @@ public class BoardDetailActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             handleVoteUp(board, textView, ParseUser.getCurrentUser());
+        }
+    }
+
+    private void sendAnalytic(String boardTitle) {
+
+        try {
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).setScreenName(AConstants.SCREEN_BOARD+"_"+boardTitle);
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).send(new HitBuilders.EventBuilder()
+                    .setCategory(AConstants.SCREEN_BOARD_DETAIL)
+                    .setAction(AConstants.SCREEN_BOARD_DETAIL)
+                    .setLabel(boardTitle)
+                    .build());
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).send(new HitBuilders.ScreenViewBuilder().build());
+
+        } catch (IllegalStateException e) {
         }
     }
 

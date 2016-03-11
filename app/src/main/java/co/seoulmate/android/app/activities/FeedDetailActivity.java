@@ -38,6 +38,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.analytics.HitBuilders;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.parse.DeleteCallback;
 import com.parse.FindCallback;
@@ -55,8 +56,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import co.seoulmate.android.app.AnalyticsTrackers;
 import co.seoulmate.android.app.R;
 import co.seoulmate.android.app.adapters.FeedCommentAdapter;
+import co.seoulmate.android.app.helpers.AConstants;
 import co.seoulmate.android.app.model.Activity;
 import co.seoulmate.android.app.model.Feed;
 import co.seoulmate.android.app.utils.CategoryUtils;
@@ -242,7 +245,7 @@ public class FeedDetailActivity extends AppCompatActivity {
             profilePic.setImageResource(R.drawable.avatar_1_raster);
 
         }
-
+        sendAnalytic(q.getObjectId());
 
         ViewCompat.animate(profilePic)
                 .setInterpolator(new FastOutLinearInInterpolator())
@@ -502,5 +505,19 @@ public class FeedDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void sendAnalytic(String boardTitle) {
+
+        try {
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).setScreenName(AConstants.SCREEN_QUESTION+"_"+boardTitle);
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).send(new HitBuilders.EventBuilder()
+                    .setCategory(AConstants.SCREEN_QUESTION_DETAIL)
+                    .setAction(AConstants.SCREEN_QUESTION_DETAIL)
+                    .setLabel(boardTitle)
+                    .build());
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).send(new HitBuilders.ScreenViewBuilder().build());
+        } catch (IllegalStateException e) {
+        }
     }
 }

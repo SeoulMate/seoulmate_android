@@ -28,8 +28,8 @@
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="4dp"
-                android:paddingLeft="12dp"
                 android:paddingBottom="2dp"
+                android:layout_marginLeft="4dp"
                 android:id="@+id/voteUpLayout"
                 android:paddingRight="4dp"
                 android:layout_height="wrap_content">
@@ -74,7 +74,7 @@
                 android:layout_marginStart="50dp"
                 style="@style/SeoulMate.List.FeedTitle"
                 android:paddingRight="10dp"
-                android:layout_marginTop="-76dp"
+                android:layout_marginTop="-82dp"
                 android:paddingBottom="8dp"
                 android:text="@string/large_text" />
             </LinearLayout>

@@ -3,6 +3,8 @@ package co.seoulmate.android.app;
 import android.app.Activity;
 import android.app.Application;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseObject;
@@ -19,6 +21,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
  * Created by hassanabid on 3/1/16.
  */
 public class MainApplication extends Application {
+
+    private AnalyticsTrackers mTracker;
 
     @Override
     public void onCreate() {
@@ -51,5 +55,9 @@ public class MainApplication extends Application {
                         .setFontAttrId(R.attr.fontPath)
                         .build()
         );
+
+        AnalyticsTrackers.initialize(this);
     }
+
+
 }

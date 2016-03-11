@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.analytics.HitBuilders;
 import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -21,9 +22,11 @@ import com.parse.ParseObject;
 
 import java.util.List;
 
+import co.seoulmate.android.app.AnalyticsTrackers;
 import co.seoulmate.android.app.R;
 import co.seoulmate.android.app.adapters.BoardAdapter;
 import co.seoulmate.android.app.adapters.FeedAdapter;
+import co.seoulmate.android.app.helpers.AConstants;
 import co.seoulmate.android.app.model.Board;
 import co.seoulmate.android.app.model.Feed;
 import co.seoulmate.android.app.utils.ModelUtils;
@@ -65,6 +68,7 @@ public class FeedFragment extends android.support.v4.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        sendAnalytics();
     }
 
     @Override
@@ -192,4 +196,13 @@ public class FeedFragment extends android.support.v4.app.Fragment {
         return false;
     }
 
+    private void sendAnalytics() {
+
+        try {
+            ;
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).setScreenName(AConstants.SCREEN_QUESTION);
+            AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP).send(new HitBuilders.ScreenViewBuilder().build());
+        } catch (IllegalStateException e) {
+        }
+    }
 }

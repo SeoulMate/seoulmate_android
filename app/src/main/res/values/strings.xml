@@ -64,6 +64,7 @@
 
     <string name="message_2" translatable="false">Get instant replies of your questions</string>
     <string name="message_1" translatable="false">Connect with fellow International Students in Korea</string>
+    <string name="voting_already" translatable="false">You have already voted up!</string>
 
     <!-- Activity names -->
     <string name="feed_detail" translatable="false">Question Detail</string>

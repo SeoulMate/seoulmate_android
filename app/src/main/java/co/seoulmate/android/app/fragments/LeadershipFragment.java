@@ -161,7 +161,7 @@ public class LeadershipFragment extends Fragment {
                     return;
                 }
                 ParseObject.pinAllInBackground(ModelUtils.USER_PIN, userList);
-                Log.d(LOG_TAG, "pinned boardList : " + ModelUtils.USER_PIN);
+                Log.d(LOG_TAG, "pinned userList : " + ModelUtils.USER_PIN);
 
             }
         });
