@@ -1,4 +1,4 @@
-   Copyright 2015 Google Inc. All rights reserved.
+   Copyright 2015 Seoul Mate. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 
 # How to build Seoul Mate
 
-Note: while these instructions allow you to build iosched, much of the
+Note: while these instructions allow you to build Seoul Mate, much of the
 functionality that depends on Parse APIs won't work because in order to
 do that you need to configure your own project on Parse and Facebook Website, create 
 apps and get api and client key, etc. For more information about what you
@@ -90,5 +90,10 @@ gradle.properties file `facebookApplicationIdDebug=App_Id`
 
 
 2. For release version please enter these values in gradle.properties `ParseApplicationReleaseId` , `ParseClientRleaseKey` and `facebookApplicationIdRelease`
+
+# New Features
+
+1. Goolge Places Api and Maps integration
+2. Restaurant Search nearby
 
 
